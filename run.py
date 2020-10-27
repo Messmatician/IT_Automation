@@ -4,7 +4,8 @@ import requests
 import json
 import re
 
-dir = "/home/student-04-39b239d0c098/supplier-data/descriptions/"
+url = 'http://35.202.201.153/fruits/'
+dir = "/home/student-03-c4490e41965f/supplier-data/descriptions/"
 for txt in os.listdir(dir):
   if txt.endswith(".txt"):
     dic = {}
@@ -15,5 +16,5 @@ for txt in os.listdir(dir):
       dic['weight'] = weight
       dic['description'] = f.readline()
       dic['image_name'] = txt.strip('.txt') + '.jpeg'
-    print(dic)
-
+    dic_json = json.dumps(dic)
+    requests.post(url, json = dic)

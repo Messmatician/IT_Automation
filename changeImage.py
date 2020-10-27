@@ -3,7 +3,7 @@ from PIL import Image
 import os
 import os.path
 
-dir = "/home/student-04-39b239d0c098/supplier-data/images"
+dir = "/home/student-03-c4490e41965f/supplier-data/images"
 for image in os.listdir(dir):
   if image.endswith(".tiff"):
     img = Image.open(dir + "/" + image)

@@ -3,7 +3,7 @@ import requests
 import os
 
 url = "http://localhost/upload/"
-dir = "/home/student-04-39b239d0c098/supplier-data/images"
+dir = "/home/student-03-c4490e41965f/supplier-data/images"
 for image in os.listdir(dir):
   if image.endswith(".jpeg"):
     with open(dir + "/" + image, 'rb') as opened:
