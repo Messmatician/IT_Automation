@@ -10,10 +10,10 @@ for txt in os.listdir(dir):
     dic = {}
     with open(dir + txt) as f:
       dic['name'] = f.readline()
-      weight = int(re.match("[0-9]*", f.readline()).groups()[0])
+      weight = int(re.match("[0-9]*", f.readline()).group())
       print(weight)
       dic['weight'] = weight
       dic['description'] = f.readline()
-      dic['mage_name'] = txt - '.txt' + '.jpeg'
+      dic['image_name'] = txt.strip('.txt') + '.jpeg'
     print(dic)
 
